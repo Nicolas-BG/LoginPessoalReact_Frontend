@@ -1,0 +1,51 @@
+.area{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    margin: 1.5rem;
+}
+
+.infoBox{
+    background-color: #d8d8d8;
+    padding: 1.5rem;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.infoBox p{
+    margin: 0.5rem;
+    font-weight: bold;
+}
+
+.infoBox img{
+    height: 29rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.infoBox Button{
+    width: 5rem;
+    margin-left: auto;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    transition: background-color 0.25s ease;
+}
+
+.infoBox Button:hover{
+    background-color: #e6e6e6;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.area {
+    background-color: darkblue;
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 3rem;
+    margin: 1rem;
+    font-style: italic;
+    font-weight: bold;
+}

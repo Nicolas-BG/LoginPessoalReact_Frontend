@@ -1,0 +1,74 @@
+.tarefaItem {
+    min-width: 15vw;
+    max-width: 15vw;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefaItem .descricao {
+    background-color: #ffffff;
+    padding: 0.5rem;
+    height: 5rem;
+    overflow: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    line-height: 1.2;
+}
+
+.tarefaItem span {
+    font-weight: bold;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.botoes {
+    display: flex;
+    margin-top: 1rem;
+    
+    margin-left: auto;
+}
+
+.botoes button {
+    width: 4.5rem;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.25s ease;
+}
+
+.botoes button:hover {
+    cursor: pointer;
+}
+
+.editar {
+    background-color: #d5f3ff;
+}
+
+.editar:hover {
+    background-color: #a3dff3;
+}
+
+.excluir {
+    background-color: #ffcfcf;
+}
+
+.excluir:hover {
+    background-color: #ffabab;
+}

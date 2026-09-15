@@ -1,0 +1,11 @@
+.area {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    
+}
+
+.titulos{
+    margin-top: 1.5rem;
+}

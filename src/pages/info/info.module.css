@@ -24,7 +24,8 @@
 }
 
 .infoBox img{
-    height: 29rem;
+    height: 28rem;
+    width: 21rem;
     padding: 1rem;
     background-color: #f0f0f0;
     border-radius: 0.5rem;

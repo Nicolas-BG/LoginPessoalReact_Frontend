@@ -4,7 +4,6 @@ import './index.css'
 import Page_Router from './Page_Router.tsx'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Page_Router />
-  </StrictMode>,
+  <Page_Router />
+  
 )

@@ -1,10 +1,31 @@
 import styles from './header.module.css'
-import { useState } from 'react'
-import UserService from '../../services/UserService.tsx';
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 function Header() {  
-  const userService = new UserService();
-  const nome = userService.user.nome;
+  const [nome, setNome] = useState();
+  const navigate = useNavigate();   
+
+  useEffect(() => {              
+    PegarDados();
+  }, []);
+  
+  
+  function PegarDados() {
+    const dados = sessionStorage.getItem("dados")
+
+    if (dados) {
+      const usuario = JSON.parse(dados)
+
+      setNome(usuario.nome);
+      //console.log(usuario.nome)
+
+    } else {
+      console.log("dados não pegos")
+      navigate('/home');
+    }
+  }
 
   return (
     <>

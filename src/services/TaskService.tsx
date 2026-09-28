@@ -44,4 +44,119 @@ export default class TaskService {
         userId: 0
     }
     ];
+
+    async AddTarefa(formData: FormData) {
+        try {
+            const token = localStorage.getItem('token')
+
+            const response = await fetch(
+                'http://localhost:3333/api/tarefas',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: formData
+                }
+            )
+
+            const resultado = await response.json()
+
+            if (!response.ok) {
+                console.error(resultado.message)
+                return false
+            }
+
+            console.log('Tarefa adicionada:', resultado)
+            return true
+
+        } catch (error) {
+            console.error('Erro ao conectar com a API:', error)
+            return false
+        }
+
+    }
+
+    async EditarTarefa(formData: FormData, id: number) {
+        try {
+            const token = localStorage.getItem('token')
+
+            const response = await fetch(
+                `http://localhost:3333/api/tarefas/${id}`,
+                {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: formData
+                }
+            )
+
+            const resultado = await response.json()
+
+            if (!response.ok) {
+                console.error(resultado.message)
+                return false
+            }
+
+            console.log('Tarefa editada:', resultado);
+            return true
+
+        } catch (error) {
+            console.error('Erro ao conectar com a API:', error);
+            return false
+        }
+
+    }
+
+
+
+    async getTarefas() {
+        const token = localStorage.getItem('token')
+
+        const response = await fetch('http://localhost:3333/api/tarefas', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+
+        const resultado = await response.json()
+
+        if (!response.ok) {
+            console.error(resultado.message)
+            return []
+        }
+
+        return resultado
+    }
+
+    async getTarefaId(id: number) {
+        try {
+            const token = localStorage.getItem('token')
+
+            const response = await fetch(
+                `http://localhost:3333/api/tarefas/${id}`,
+                {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                }
+            )
+
+            const resultado = await response.json()
+
+            if (!response.ok) {
+                console.error(resultado.message)
+                return null
+            }
+
+            return resultado
+
+        } catch (error) {
+            console.error('Erro ao conectar com a API:', error)
+            return null
+        }
+    }
 }

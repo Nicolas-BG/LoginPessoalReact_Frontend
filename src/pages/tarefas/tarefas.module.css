@@ -10,5 +10,23 @@
     margin: 1.5rem;
 }
 
+.button {
+    margin-left: auto;
+    margin-right: 10rem;
+    margin-top: 2 rem;
+    margin-bottom: 2rem;
+    width:8vw;
+    height:4.5vh;
+    font-size: 1.8vh;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.25s ease;
+}
+
+.button:hover {
+    background-color: rgb(218, 218, 218);
+    cursor: pointer;
+}
+
 
 

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
+
 function Header() {  
   const [nome, setNome] = useState();
   const navigate = useNavigate();   
@@ -13,17 +14,14 @@ function Header() {
   
   
   function PegarDados() {
-    const dados = sessionStorage.getItem("dados")
+    const dados = sessionStorage.getItem("dados")    
 
     if (dados) {
       const usuario = JSON.parse(dados)
-
       setNome(usuario.nome);
-      //console.log(usuario.nome)
-
-    } else {
+    } else {     
       console.log("dados não pegos")
-      navigate('/home');
+      navigate('/login');
     }
   }
 

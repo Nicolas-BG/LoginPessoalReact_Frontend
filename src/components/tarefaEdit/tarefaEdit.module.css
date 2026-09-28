@@ -1,0 +1,42 @@
+.caixa{
+    background-color: #d8d8d8;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 1rem;
+    width: 20vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    font-weight:500;
+}
+
+.input {
+    width: 18vw;
+    height: 2.5vh;
+    padding: 0.5vh;
+    font-size: 1.6vh;
+}
+
+.text {
+    width: 18vw;
+    height: 12.5vh;
+    padding: 0.5vh;
+    font-size: 1.6vh;
+    overflow: auto;
+}
+
+.option {
+    margin: 0.5vh;
+}
+
+input[type=radio]{
+    padding: 0.5vh;
+}

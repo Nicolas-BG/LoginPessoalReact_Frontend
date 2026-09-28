@@ -1,5 +1,3 @@
-import type User from '../interfaces/user';
-
 export default class UserService {
     
     public async SignIn(formData: FormData) {
@@ -132,6 +130,30 @@ export default class UserService {
         //console.log('dados da sessão:', sessionStorage.getItem("dados"))
         //console.log('nome', sessionStorage.getItem("dados"))
 
+        return true;
+    }
+
+    async Logout() {
+        const token = localStorage.getItem('token')
+
+        const response = await fetch('http://localhost:3333/logout', {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            alert("Erro ao fazer Logout");
+            return false;
+        }
+
+        localStorage.removeItem('token');
+        localStorage.clear();
+        sessionStorage.clear();
+
+        alert("Logout feito com sucesso");
         return true;
     }
 
